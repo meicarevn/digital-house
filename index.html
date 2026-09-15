@@ -21,6 +21,10 @@ body.dark{--bg:#081722;--card:#102a43;--text:#f3f7fa;--muted:#bdd0dc;--line:#2a4
 @media(max-width:880px){.app{grid-template-columns:1fr}.side{position:fixed;z-index:20;top:auto;bottom:0;left:0;right:0;height:calc(72px + env(safe-area-inset-bottom));padding:6px 6px env(safe-area-inset-bottom);box-shadow:0 -8px 24px rgba(16,42,67,.12)}.logo,.offline{display:none}.nav{grid-template-columns:repeat(5,minmax(64px,1fr));overflow-x:auto}.nav button{text-align:center;padding:9px 5px;font-size:.8rem;min-height:56px}main{padding-bottom:calc(72px + env(safe-area-inset-bottom))}.hero{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.quick{grid-template-columns:minmax(0,1fr) minmax(140px,.55fr);}.quick .btn{grid-column:2}.top{height:60px}}
 @media(max-width:560px){.wrap{padding-top:18px}.grid,.rooms,.settings,.coregrid{grid-template-columns:1fr}.wide{grid-column:auto}.inline,.inline.three{grid-template-columns:1fr}.summary{grid-template-columns:1fr 1fr 1fr}.quick{grid-template-columns:1fr}.quick .btn{grid-column:auto}.focus{min-height:auto}.focus h2{font-size:2.3rem}.row{grid-template-columns:44px minmax(0,1fr)}.priority{grid-column:2;justify-self:start}.clock{font-size:3rem}.searchbar{align-items:stretch;flex-direction:column}.modal{padding:0;align-items:end}.dialog{border-radius:22px 22px 0 0;max-height:90vh}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+.wrap{container-type:inline-size}.focus{container-type:inline-size}.focus,.card,.quick>*{min-width:0}
+@container (max-width:860px){.hero{grid-template-columns:1fr}.coregrid{grid-template-columns:1fr}.hero>.card{min-height:auto}.focus h2{font-size:clamp(2.25rem,7vw,3.5rem)}}
+@container (max-width:620px){.quick{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.quick label:first-child,.quick .btn{grid-column:1/-1}.quick .btn{width:100%}}
+@container (max-width:420px){.quick{grid-template-columns:1fr}.quick label:first-child,.quick .btn{grid-column:auto}.summary{grid-template-columns:1fr 1fr}.summary div:last-child{grid-column:1/-1}}
 </style>
 </head>
 <body>
